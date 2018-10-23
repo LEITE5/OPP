@@ -43,4 +43,9 @@ public class Table {
         booking = null;
     }
     
+    public int getNumSeats()
+    {
+    return numSeats;
+    }
+    
 }
