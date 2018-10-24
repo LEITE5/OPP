@@ -21,7 +21,7 @@ public class Week5 {
         b.passEnter(new Passenger(2,"joao", 25, 2.5));
         b.passEnter(new Passenger(3,"paulo", 25, 2.5));
         b.passEnter(new Passenger(4,"estrela", 25, 2.5));
- //       b.passLeave(1);
+ //     b.passLeave(1);
         b.passNum();
         
         System.out.println(b.toString());
