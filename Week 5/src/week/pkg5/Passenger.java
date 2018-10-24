@@ -10,28 +10,33 @@ package week.pkg5;
  * @author 4estrj82
  */
 public class Passenger {
-     private String name;
-     private int age;
-     private double fare;
-     public Passenger(String nameIn, int ageIn, double fareIn)
-     {
-         name = nameIn;
-         age = ageIn;
-         fare = fareIn;
-     }
-     
-     public String getName()
-     {
-         return name;
-     }
-     public int getAge()
-     {
-         return age;
-     }
-     public double getFare()
-     {
-         return fare;
-     }
+
+    private int id;
+    private String name;
+    private int age;
+    private double fare;
+
+    public Passenger(int idIn, String nameIn, int ageIn, double fareIn) {
+        id = idIn;
+        name = nameIn;
+        age = ageIn;
+        fare = fareIn;
+    }
+
+    public int getID() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getFare() {
+        return fare;
+    }
 //    private int ID;
 //    
 //    public Passenger(int idIn)
@@ -45,11 +50,7 @@ public class Passenger {
 
     @Override
     public String toString() {
-        return "Passenger{" + "name=" + name + ", age=" + age + ", fare=" + fare + '}';
+        return "Passenger{" + "ID= " + id + ", name=" + name + ", age=" + age + ", fare=" + fare + '}';
     }
-    
-    
-    
-    
-    
+
 }

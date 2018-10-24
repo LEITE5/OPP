@@ -13,10 +13,10 @@ public class Bus {
 
     private Passenger[] passengers = new Passenger[15];
 
-    public boolean passEnter(Passenger idIN) {
+    public boolean passEnter(Passenger idIn) {
         for (int i = 0; i < passengers.length; i++) {
             if (passengers[i] == null) {
-                passengers[i] = idIN;
+                passengers[i] = idIn;
                 return true;
             }
 
@@ -24,24 +24,50 @@ public class Bus {
         return false;
     }
 
+    public boolean passLeave(int id) {
+        for (int i = 0; i < passengers.length; i++) {
+            if (passengers[i].getID() == id) {
+                passengers[i] = null;
+                return true;
+            }
+        }
+        return false;
+    }
+
     public String toString() {
         String ret = "";
-         for (int i = 0; i < passengers.length; i++) {
-           if(passengers[i] != null)
-           {
-               ret = ret + passengers[i].toString() +"\n";
-           }
-         }
-//        
+        for (int i = 0; i < passengers.length; i++) {
+            if (passengers[i] != null) {
+                ret = ret + passengers[i].toString() + "\n";
+            }
+        }
         return ret;
     }
-    public int coisa()
-    {
+    
+    public int passNum() {
+        int tally = 0;
         for (int i = 0; i < passengers.length; i++) {
-           if(passengers[i] != null){}
-           int nao = i;
-           System.out.println(nao);
+            if (passengers[i] != null) {
+                tally++;
+                
+            }
+            
         }
+       System.out.println("Total number of passengers is " + tally);
+       return tally;
     }
     
+    public double getTotalFare()
+    {
+        double total = 0;
+        for (int i = 0; i < passengers.length; i++) {
+            if (passengers[i] != null)
+            {
+                total += passengers[i].getFare();
+            }
+        }
+        return total;
+    }
+    
+
 }

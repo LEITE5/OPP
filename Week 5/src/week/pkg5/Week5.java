@@ -17,15 +17,17 @@ public class Week5 {
     public static void main(String[] args) {
         Bus b = new Bus();
 
-        b.passEnter(new Passenger("fred", 25, 2.5));
-        b.passEnter(new Passenger("joao", 25, 2.5));
-        b.passEnter(new Passenger("paulo", 25, 2.5));
-        b.passEnter(new Passenger("estrela", 25, 2.5));
-
+        b.passEnter(new Passenger(1,"fred", 25, 2.5));
+        b.passEnter(new Passenger(2,"joao", 25, 2.5));
+        b.passEnter(new Passenger(3,"paulo", 25, 2.5));
+        b.passEnter(new Passenger(4,"estrela", 25, 2.5));
+ //       b.passLeave(1);
+        b.passNum();
+        
         System.out.println(b.toString());
         System.out.println();
-
-        b.coisa();
+        
+ 
 // TODO code application logic here
     }
 
