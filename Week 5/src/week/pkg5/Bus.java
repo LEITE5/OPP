@@ -43,31 +43,28 @@ public class Bus {
         }
         return ret;
     }
-    
+
     public int passNum() {
         int tally = 0;
         for (int i = 0; i < passengers.length; i++) {
             if (passengers[i] != null) {
                 tally++;
-                
+
             }
-            
+
         }
-       System.out.println("Total number of passengers is " + tally);
-       return tally;
+        System.out.println("Total number of passengers is " + tally);
+        return tally;
     }
-    
-    public double getTotalFare()
-    {
+
+    public double getTotalFare() {
         double total = 0;
         for (int i = 0; i < passengers.length; i++) {
-            if (passengers[i] != null)
-            {
+            if (passengers[i] != null) {
                 total += passengers[i].getFare();
             }
         }
         return total;
     }
-    
 
 }
