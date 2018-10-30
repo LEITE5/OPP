@@ -9,6 +9,13 @@ public class Dog {
     private int numDays;
     private double fare;
     
+//    public Dog(String nameIn, int idIn, String ownerIn, int numDaysIn){
+//        name = nameIn;
+//        id = idIn;
+//        owner = ownerIn;
+//        numDays = numDaysIn;
+//    }
+    
     public String getName()
     {
         return name;
@@ -50,4 +57,11 @@ public class Dog {
     {
         setFare = fare;
     }
+    
+    @Override
+    public String toString() {
+        return "Dog{" + "Name= " + name + ", Owner= " + owner + ", fare= " + fare + "Staying = " + numDays + "To pay = " + fare + "}";
+    }
+    
+    
 }
